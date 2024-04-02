@@ -1,20 +1,17 @@
-import Product from "./components/Product.jsx";
-
-function ProductCatalog({productList}) {
+import Product from "./Product.jsx"
+function ProductCatalog({productsList}) {
 
 
     return (
 <div className="catalog">
-
-{productList.map((article) =>
-<div className="card">        
-         <h2>{article.name}</h2>
-         <img className= "img" src={article.image}  alt="" />
-         <button onClick={() =>handleArticle(index)} key={p.name}> Plus de détails </button>  
-        
-</div>
- )}
-
+{productsList.map((p) => (
+      <Product 
+      key ={p.name}
+      name ={p.name}
+      image={p.image}
+      price={p.price}
+      category={p.category}/>
+))}
 </div>
 
     );

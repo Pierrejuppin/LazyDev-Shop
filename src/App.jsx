@@ -1,5 +1,9 @@
 import ProductCatalog from "./components/ProductCatalog.jsx"
+<<<<<<< HEAD
 import Product from "./components/Product.jsx";
+=======
+import ProductDetails from "./components/ProductDetails.jsx";
+>>>>>>> 0ba66aedd58c6ee760993aaf2c530341d20d6eec
 import "./App.css";
 import { useState } from "react";
 
@@ -30,7 +34,7 @@ function App() {
 }
 
 
-const productList = [
+const productsList = [
   {
       name: "WC portatif",
       image: "src/assets/toilettebureau.jpeg",
