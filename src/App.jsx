@@ -1,9 +1,16 @@
 import ProductCatalog from "./components/ProductCatalog.jsx"
+import Product from "./components/Product.jsx";
 import "./App.css";
+import { useState } from "react";
+
 
 
 
 function App() {
+
+  const [articleIndex, setArticleIndex] = useState(0)
+
+
 
 
   return (
@@ -11,14 +18,19 @@ function App() {
     <h1>Lazy Dev</h1>
         <div>
           <ProductCatalog 
-          products = {products}/>
+          productList = {productList}/>
+          <Product
+          setArticleIndex = {setArticleIndex}
+          productList = {productList}/>
+
           </div>
+
     </>
   )
 }
 
 
-const products = [
+const productList = [
   {
       name: "WC portatif",
       image: "src/assets/toilettebureau.jpeg",
