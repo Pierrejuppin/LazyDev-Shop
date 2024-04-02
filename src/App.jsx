@@ -1,4 +1,5 @@
 import ProductCatalog from "./components/ProductCatalog.jsx"
+import ProductDetails from "./components/ProductDetails.jsx";
 import "./App.css";
 
 
@@ -11,14 +12,14 @@ function App() {
     <h1>Lazy Dev</h1>
         <div>
           <ProductCatalog 
-          products = {products}/>
+          productsList = {productsList}/>
           </div>
     </>
   )
 }
 
 
-const products = [
+const productsList = [
   {
       name: "WC portatif",
       image: "src/assets/toilettebureau.jpeg",
