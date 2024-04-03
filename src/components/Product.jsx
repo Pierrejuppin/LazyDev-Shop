@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 function Product({name, image, price, category}) {
 
 
@@ -26,4 +24,3 @@ function Product({name, image, price, category}) {
 
 
 export default Product
->>>>>>> 0ba66aedd58c6ee760993aaf2c530341d20d6eec
