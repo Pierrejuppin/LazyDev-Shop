@@ -1,23 +1,19 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import ProductCatalog from "./components/ProductCatalog.jsx";
 import ProductDetails from "./components/ProductDetails.jsx";
 import ProductFilter from "./components/ProductFilter.jsx";
 import "./App.css";
 
+
 function App() {
-  const [selectedProduct, setSelectedProduct] = useState(null);
-  const [filterProduct, setfilterProduct] = useState(!null);
+  const [selectedProduct, setSelectedProduct] = useState([]);
+
+  const [filterProduct, setfilterProduct] = useState("");
   
   const handleProductClick = (product) => {
     setSelectedProduct(product);
   };
 
-  const handleFilterProduct = (category) => {
-        setfilterProduct(category);
-  }
-  
-  
-  
   
   
   
@@ -64,7 +60,8 @@ function App() {
     <>
       <nav className="navBar">
       <ProductFilter 
-      handleFilterProduct = {handleFilterProduct}
+      setfilterProduct = {setfilterProduct}
+      productsList={productsList}
       />
       </nav>
       
@@ -75,7 +72,9 @@ function App() {
       <div>
         <ProductCatalog 
         productsList={productsList} 
-        productClick={handleProductClick}/>
+        productClick={handleProductClick}
+        filterProduct={filterProduct}
+        />
       </div>
       <div className="details">
         <ProductDetails 

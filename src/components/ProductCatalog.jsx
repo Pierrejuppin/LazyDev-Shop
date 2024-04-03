@@ -1,7 +1,10 @@
-import React from "react";
+
 import Product from "./Product.jsx";
 
-function ProductCatalog({ productsList, productClick }) {
+function ProductCatalog({ productsList, productClick, filterProduct }) {
+  const filterCategory = productsList.filter((p) => p.category.includes({filterProduct}));
+
+
   return (
     <div className="catalog">
       {productsList.map((p) => (
