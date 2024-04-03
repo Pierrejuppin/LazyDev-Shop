@@ -1,17 +1,13 @@
-function ProductFilter({productList,setFilterProduct}) {
-
-    const handleFilterProduct = (category)=>{
-        setFilterProduct(productList[category])
-    }
-
+function ProductFilter({handleFilterProduct}) {
     return (
+      <>
+        <button onClick={handleFilterProduct}>❤️ Coup de coeur</button>
+        <button onClick={handleFilterProduct}>Utile</button>
+        <button onClick={handleFilterProduct}>Indispensable</button>
+
         
-        {productList.filter(category) => (
-            <div onClick={() => handleFilterProduct()}>
-           
-
-
-
-
-
-export default ProductFilter
+      </>
+    );
+  }
+  
+  export default ProductFilter;
